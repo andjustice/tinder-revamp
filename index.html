@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">    
+<script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js'></script> 
+<script src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="init.js"></script>
+
+
+<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+		overflow-x: hidden;
+	}
+
+</style>
+<body>
+	<div class="main">
+		<div class="window">
+			<div class="w3-bar w3-light-grey w3-row">			
+				<div class="w3-third window-btn flex row-valign">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="w3-third w3-center">
+					<a href="#" class="w3-bar-item w3-button w3-green"><i class="material-icons">whatshot</i></a>
+					<a href="#" class="w3-bar-item w3-button"><i class="material-icons">message</i></a>
+					<a href="#" class="w3-bar-item w3-button"><i class="material-icons">person_pin</i></a>
+
+				</div>
+				<div class="w3-third">		
+					<a href="#" class="w3-bar-item w3-button w3-right"><i class="material-icons">account_circle</i></a>
+				</div>
+				
+			</div>
+			<section class="window-content flex">
+				<div id="user-1" class="slider">
+					<div class="user-data flex">
+						<div>
+							<h4>Jane Doe</h4>	
+							<p>Lorem ipsum dolor</p>		
+						</div>						
+						<button class="w3-btn">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn w3-transparent">
+							<i class="material-icons w3-text-white">share</i>
+						</button>					
+					</div>
+					
+					<img class="mySlides" src="img/01.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-a.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-b.jpg" style="width:100%">	
+					
+					<div class="next-prev flex">
+						<div class="w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+						<div class="w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>	
+					</div>						
+					<div class="controls w3-padding-left w3-padding-right">
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons">clear</i>
+						</button>
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons w3-text-amber">star</i>
+						</button>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.</p>						
+						<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
+						<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
+						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>	
+					</div>					
+				</div>
+				<div id="user-2" class="slider">
+					<div class="user-data flex">
+						<div>
+							<h4>Jane Doe</h4>	
+							<p>Lorem ipsum dolor</p>		
+						</div>						
+						<button class="w3-btn">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn w3-transparent">
+							<i class="material-icons w3-text-white">share</i>
+						</button>					
+					</div>
+					
+					<img class="mySlides" src="img/01.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-a.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-b.jpg" style="width:100%">	
+					
+					<div class="next-prev flex">
+						<div class="w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+						<div class="w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>	
+					</div>						
+					<div class="controls w3-padding-left w3-padding-right">
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons">clear</i>
+						</button>
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons w3-text-amber">star</i>
+						</button>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.</p>						
+						<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
+						<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
+						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>	
+					</div>					
+				</div>
+
+				<div id="user-3" class="slider">
+					<div class="user-data flex">
+						<div>
+							<h4>Jane Doe</h4>	
+							<p>Lorem ipsum dolor</p>		
+						</div>						
+						<button class="w3-btn">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn w3-transparent">
+							<i class="material-icons w3-text-white">share</i>
+						</button>					
+					</div>
+					
+					<img class="mySlides" src="img/01.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-a.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-b.jpg" style="width:100%">	
+					
+					<div class="next-prev flex">
+						<div class="w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+						<div class="w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>	
+					</div>						
+					<div class="controls w3-padding-left w3-padding-right">
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons">clear</i>
+						</button>
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons w3-text-pink">favorite</i>
+						</button>
+						<button class="w3-btn w3-btn-floating w3-white">
+							<i class="material-icons w3-text-amber">star</i>
+						</button>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.</p>						
+						<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
+						<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
+						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>	
+					</div>					
+				</div>
+				
+				
+			</section>		
+			</div>
+
+			
+		</div>
+	</div>
+	
+
+</body>
+<script>
+//        var scene = new ScrollMagic.Scene({
+//            triggerElement: ".content", duration: "100%"})
+//        .setTween(".caca", 0.5, {backgroundColor: "green", scale: 2.5}) 
+//        .addIndicators({name: "1 (duration: 0)"}) 
+//        .addTo(controller);
+
+//         var scene = new ScrollMagic.Scene({
+//             triggerElement: ".scs-parallax3", duration:"40%", triggerHook: '0.50' })
+//         .setTween(".scs-parallax3-img03", 0.5, {top:"-0%"}) 
+// //        .addIndicators({name: "1 (duration: 0)"}) 
+//         .addTo(controller);    
+
+//         var scene = new ScrollMagic.Scene({
+//             triggerElement: ".scs-parallax3", duration:"40%", triggerHook: '0.45' })
+//         .setTween(".scs-parallax3-img02", 0.5, {top:"0%"}) 
+//                 .addIndicators({name: "1 (duration: 0)"}) 
+//         .addTo(controller); 
+
+//         var scene = new ScrollMagic.Scene({
+//             triggerElement: ".trigger", duration: "100%",  triggerHook: 'onCenter'})
+//         .setTween(".scs-parallax3-img01", 0.5, {top:"50%"}) 
+//         //        .addIndicators({name: "1 (duration: 0)"}) 
+//         .addTo(controller); 
+
+
+</script>
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+  }
+
+  function currentDiv(n) {
+	  showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("indicators");
+	  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+		   }
+		   for (i = 0; i < dots.length; i++) {
+			   dots[i].className = dots[i].className.replace(" w3-white", "");
+		   }
+		   x[slideIndex-1].style.display = "block";  
+		   dots[slideIndex-1].className += " w3-white";
+	   }        
+   </script>
+   </html>
