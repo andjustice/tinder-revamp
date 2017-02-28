@@ -10,7 +10,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
-		<script src="./js/disable-scroll.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="styles.css">
 		<script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
@@ -41,7 +40,7 @@
 
 				</div>
 				<section class="window-content" >
-					<div class="slider-wrap flex" ngDisableScroll='1' style="transform: translateX(-{{translatePercent}}%)">
+					<div class="slider-wrap flex" style="transform: translateX(-{{translatePercent}}%)">
 						<div class="slider" ng-class="{'slider-active' : $index == actualUser}"  ng-repeat="user in genreSelected">
 							<div class="user-data flex">
 								<div>
@@ -53,7 +52,7 @@
 									<i class="fa fa-spotify" aria-hidden="true"></i>
 									<span class="w3-dropdown-content w3-green w3-padding">Hello World!</span>
 								</button>
-								<button ng-click="instagramView = 1">
+								<button ng-click="instagramView = !instagramView">
 									<i class="fa fa-instagram" aria-hidden="true"></i>
 								</button>
 								<button>
@@ -61,12 +60,12 @@
 								</button>
 							</div>
 
-							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" src="{{src}}" style="width:100%">
-							<div class="instagram">
+							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" ng-src="{{src}}" style="width:100%">
+							<div class="instagram" ng-show="instagramView">
 								kb
 							</div>
 
-							<div class="next-prev flex">
+							<div class="next-prev flex" ng-show="!instagramView">
 								<div class="w3-hover-text-khaki" ng-click="prevImg(user.img)">
 									<i class="material-icons">chevron_left</i>
 								</div>
@@ -75,7 +74,7 @@
 								</div>
 							</div>
 
-							<div class="controls w3-padding-left w3-padding-right">
+							<div class="controls w3-padding-left w3-padding-right" ng-class="{'only-buttons' : instagramView}">
 								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
 									<i class="material-icons">clear</i>
 								</button>
@@ -85,9 +84,9 @@
 								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
 									<i class="material-icons w3-text-amber">star</i>
 								</button>
-								<p>{{user.desc}}</p>
+								<p ng-show="!instagramView">{{user.desc}}</p>
 
-								<span ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
+								<span ng-show="!instagramView" ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
 							</div>
 						</div>
 					</div>
