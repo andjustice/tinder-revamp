@@ -7,13 +7,14 @@
 <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
 <script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="./js/scrollMagicInit.js"></script>
 <script src="./js/app.js"></script>
-
 <style>
 	html, body {
 		height: 100%;
@@ -46,14 +47,15 @@
 				<div id="user-1" class="slider">
 					<div class="user-data flex">
 						<div>
-							<h4>Jane Doe</h4>
+							<h4>Jane Doe, 28</h4>
 							<p>Lorem ipsum dolor</p>
+							<p>3 mi.</p>
 						</div>
-						<button class="w3-btn">
-							<i class="material-icons w3-text-pink">favorite</i>
+						<button class="w3-btn w3-transparent">
+							<i class="fa fa-spotify fa-2x" aria-hidden="true"></i>
 						</button>
-						<button class="w3-btn">
-							<i class="material-icons w3-text-pink">favorite</i>
+						<button class="w3-btn w3-transparent">
+							<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
 						</button>
 						<button class="w3-btn w3-transparent">
 							<i class="material-icons w3-text-white">share</i>
@@ -84,7 +86,7 @@
 						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>
 					</div>
 				</div>
-				
+
 				<div id="user-2" class="slider">
 					<div class="user-data flex">
 						<div>
