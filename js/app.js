@@ -24,8 +24,9 @@ app.controller("mainCtrl", function($scope) {
         img      : ['img/01.jpg','img/01-a.jpg','img/01-b.jpg']
     }];
 
-    $scope.genreSelected = $scope.womens;
+    $scope.genreSelected  = $scope.womens;
     $scope.selectedImgSrc = $scope.genreSelected[0].img[0];
+    $scope.actualUser     = 1;
 
     $scope.setImg = function(src) {
         $scope.selectedImgSrc = src;
@@ -44,9 +45,13 @@ app.controller("mainCtrl", function($scope) {
         for (var i = 0; i < imgs.length; i++) {
             if (imgs[i] === $scope.selectedImgSrc) {
                 $scope.selectedImgSrc = i ?  imgs[i-1] : imgs[imgs.length - 1];
-                console.log($scope.selectedImgSrc);
                 return true;
             }
         }
+    }
+
+    $scope.nextUser = function(id) {
+        $scope.actualUser++;
+        console.log($scope.actualUser);
     }
 });
