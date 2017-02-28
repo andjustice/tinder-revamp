@@ -7,6 +7,7 @@ app.controller("mainCtrl", function($scope) {
         age      : 27,
         from     : "Mar del plata",
         distance : "3 mi.",
+        spotify  : "Michael Jackson - Smooth Criminal",
         desc     : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.",
         img      : ['img/01.jpg','img/01-a.jpg','img/01-b.jpg']
     },{
@@ -14,17 +15,20 @@ app.controller("mainCtrl", function($scope) {
         age      : 22,
         from     : "Canada",
         distance : "5 mi.",
+        spotify  : "Justin Bieber - Sorry",
         desc     : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.",
         img      : ['img/01.jpg','img/01-a.jpg','img/01-b.jpg']
     },{
         name     : "Mary Chloe",
         age      : 33,
         from     : "USA",
+        spotify  : "Pink Floyd - Comfortably numb",
         distance : "7 mi.",
         desc     : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.",
         img      : ['img/01.jpg','img/01-a.jpg','img/01-b.jpg']
     }];
 
+    $scope.tabSelected      = 'encounter';
     $scope.genreSelected    = $scope.womens;
     $scope.selectedImgSrc   = $scope.genreSelected[0].img[0];
     $scope.actualUser       = 0;

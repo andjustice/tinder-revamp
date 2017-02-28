@@ -29,7 +29,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
-  font-family: 'Muli', sans-serif;  
+  font-family: 'Muli', sans-serif;
 }
 
 *:focus {
@@ -81,8 +81,13 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   width: 100%;
   max-width: 1000px;
   height: 85%;
+<<<<<<< HEAD
   background: #ffffff;
   border-radius:5px;  
+=======
+  background: blue;
+  border-radius:5px;
+>>>>>>> origin/master
   overflow: hidden;
   transform: translateY(-50%);
   transform-origin: center;
@@ -99,7 +104,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .window-btn > div{
     width: 13px;
-    height: 13px;    
+    height: 13px;
     border-radius: 50%;
     border-width: 1px;
     border-style: solid;
@@ -108,7 +113,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .window-btn > div:nth-child(1){
     background: #FC625D;
-    border-color:#EF4B47;    
+    border-color:#EF4B47;
 }
 
 .window-btn > div:nth-child(2){
@@ -148,13 +153,13 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     overflow: hidden;
     position: relative;
     width: 100%;
-    transform: scale(.9);     
+    transform: scale(.9);
 }
 
 .slider.slider-active {
-    animation: slider-active .5s ease;  
+    animation: slider-active .5s ease;
     animation-fill-mode: forwards;
-    animation-delay:1s; 
+    animation-delay:1s;
 }
 
 @keyframes slider-active {
@@ -179,7 +184,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 }
 
 .slider .user-data > div {
-  width: 100%;  
+  width: 100%;
 }
 
 .slider .user-data > div h4{
@@ -190,20 +195,20 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   margin: 0;
 }
 
-.slider .user-data button{    
+.slider .user-data button{
     background: transparent;
     border: none;
     height: 48px;
     width: 48px;
     line-height: 48px;
-    padding: 0; 
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 8px;
 }
 
-.slider .user-data button i{    
+.slider .user-data button i{
     color: #ffffff;
     font-size: 24px;
 }
@@ -253,12 +258,12 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .slider .controls button {
   width: 48px;
-  height: 48px;  
+  height: 48px;
   margin: 0 8px;
 }
 
 .slider .controls button i{
-  line-height: 48px;  
+  line-height: 48px;
 }
 
 .slider .controls.only-buttons {
@@ -294,5 +299,5 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .blured {
   filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
-
