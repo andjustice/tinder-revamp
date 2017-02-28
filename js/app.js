@@ -1,6 +1,7 @@
 var app = angular.module("app", []);
 
 app.controller("mainCtrl", function($scope) {
+    
     $scope.womens = [{
         name     : "Jane Doe",
         age      : 27,
@@ -28,6 +29,7 @@ app.controller("mainCtrl", function($scope) {
     $scope.selectedImgSrc   = $scope.genreSelected[0].img[0];
     $scope.actualUser       = 0;
     $scope.translatePercent = 0;
+    $scope.instagramView    = 0;
 
     $scope.setImg = function(src) {
         $scope.selectedImgSrc = src;
