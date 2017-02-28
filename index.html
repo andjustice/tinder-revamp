@@ -42,7 +42,7 @@
 							<div class="user-data flex">
 								<div>
 									<h5>{{user.name}}, {{user.age}}</h5>
-									<p>{{user.from}} - <span>{{user.distance}}</span></p>									
+									<p>{{user.from}} - <span>{{user.distance}}</span></p>
 								</div>
 								<button class="w3-dropdown-hover">
 									<i class="fa fa-spotify" aria-hidden="true"></i>
@@ -57,10 +57,10 @@
 							</div>
 							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" ng-class="{'blured' : instagramView}" class="mySlides" ng-src="{{src}}" style="width:100%">
 							<img ng-show="prevImgSrc" class="mySlides" ng-src="{{prevImgSrc}}" style="width:100%">
-							<div class="instagram" ng-show="instagramView">
+							<div class="instagram" ng-show="instagramView && $index == actualUser">
 								<div class="w3-row height-100">
 									<div class="w3-col m9 height-100">
-										<img ng-src="{{selectedIgImg}}" alt="">
+										<img ng-show="!prevIgImgSrc" ng-src="{{selectedIgImg}}" alt="">
 									</div>
 
 									<div class="w3-col m3 height-100">

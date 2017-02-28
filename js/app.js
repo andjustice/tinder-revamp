@@ -46,9 +46,11 @@ app.controller("mainCtrl", function($scope,$timeout) {
     //Variable que genera animacion en cambio de usuario
     $scope.translatePercent = 0;
     //Variable que determina si activar la vista de instagram o no
-    $scope.instagramView    = 0;
+    $scope.instagramView    = false;
     //Variable que guarda el src de la imagen anterior, de esta forma se mantiene la vista mientras se hace la transicion de cambio de usuario
     $scope.prevImgSrc       = false;
+    //Variable que guarda el src de la imagen de instagram anterior, de esta forma se mantiene la vista mientras se hace la transicion de cambio de usuario
+    $scope.prevIgImgSrc     = false;
 
     //SetImg se encarga de cambiar el src de cada imagen
     $scope.setImg = function(src) {
@@ -82,16 +84,13 @@ app.controller("mainCtrl", function($scope,$timeout) {
 
     //nextUser Indica el indice de el nuevo usuario a mostrar, setea la primer foto del usuario por default y hace la animacion de cambio de usuario.
     $scope.nextUser = function() {
+        $scope.instagramView = false;
         if ($scope.translatePercent != 66.666) {
             $scope.translatePercent += 33.333;
             $scope.actualUser       = $scope.actualUser + 1;
             $scope.prevImgSrc       = $scope.selectedImgSrc;
             $scope.selectedIgImg    = $scope.genreSelected[$scope.actualUser].instagramImg[0];
             $scope.selectedImgSrc   = $scope.genreSelected[$scope.actualUser].img[0];
-
-            $setTimeout(function () {
-                $scope.prevImgSrc       = false;
-            }, 500);
         }
     }
 });
