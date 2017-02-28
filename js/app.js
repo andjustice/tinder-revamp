@@ -28,7 +28,6 @@ app.controller("mainCtrl", function($scope) {
     $scope.selectedImgSrc = $scope.genreSelected[0].img[0];
 
     $scope.setImg = function(src) {
-        console.log(src);
         $scope.selectedImgSrc = src;
     }
 
@@ -36,6 +35,15 @@ app.controller("mainCtrl", function($scope) {
         for (var i = 0; i < imgs.length; i++) {
             if (imgs[i] === $scope.selectedImgSrc) {
                 $scope.selectedImgSrc = i == imgs.length - 1 ? imgs[0] : imgs[i+1];
+                return true;
+            }
+        }
+    }
+
+    $scope.prevImg = function(imgs) {
+        for (var i = 0; i < imgs.length; i++) {
+            if (imgs[i] === $scope.selectedImgSrc) {
+                $scope.selectedImgSrc = i ?  imgs[i-1] : imgs[imgs.length - 1];
                 console.log($scope.selectedImgSrc);
                 return true;
             }

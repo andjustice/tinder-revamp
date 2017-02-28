@@ -79,7 +79,7 @@
 							</button>
 							<p>{{user.desc}}</p>
 
-							<span ng-repeat="src in user.img" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
+							<span ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
 						</div>
 					</div>
 
@@ -206,31 +206,31 @@
 </script>
 
 <script>
-	var slideIndex = 1;
-	showDivs(slideIndex);
-
-	function plusDivs(n) {
-	  showDivs(slideIndex += n);
-  }
-
-  function currentDiv(n) {
-	  showDivs(slideIndex = n);
-  }
-
-  function showDivs(n) {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("indicators");
-	  if (n > x.length) {slideIndex = 1}
-		  if (n < 1) {slideIndex = x.length}
-			  for (i = 0; i < x.length; i++) {
-			   x[i].style.display = "none";
-		   }
-		   for (i = 0; i < dots.length; i++) {
-			   dots[i].className = dots[i].className.replace(" w3-white", "");
-		   }
-		   x[slideIndex-1].style.display = "block";
-		   dots[slideIndex-1].className += " w3-white";
-	   }
+  // ar slideIndex = 1;
+  // howDivs(slideIndex);
+  //
+  // unction plusDivs(n) {
+  //  showDivs(slideIndex += n);
+  // }
+  //
+  // function currentDiv(n) {
+  //  showDivs(slideIndex = n);
+  // }
+  //
+  // function showDivs(n) {
+  //  var i;
+  //  var x = document.getElementsByClassName("mySlides");
+  //  var dots = document.getElementsByClassName("indicators");
+  //  if (n > x.length) {slideIndex = 1}
+  //   if (n < 1) {slideIndex = x.length}
+  // 	  for (i = 0; i < x.length; i++) {
+  // 	   x[i].style.display = "none";
+  //    }
+  //    for (i = 0; i < dots.length; i++) {
+  // 	   dots[i].className = dots[i].className.replace(" w3-white", "");
+  //    }
+  //    x[slideIndex-1].style.display = "block";
+  //    dots[slideIndex-1].className += " w3-white";
+  //   }
    </script>
    </html>
