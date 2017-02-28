@@ -254,3 +254,14 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   line-height: 48px;  
 }
 
+.instagram {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: red;
+    width: 90%;
+    bottom: 16px;
+}
+
