@@ -28,15 +28,15 @@
 						<div></div>
 					</div>
 					<div class="w3-third w3-center">
-						<a href="#" class="w3-bar-item w3-button w3-green"><i class="material-icons">whatshot</i></a>
-						<a href="#" class="w3-bar-item w3-button"><i class="material-icons">message</i></a>
+						<a ng-click="tabSelected = 'encounter'" ng-class="{'w3-green' : tabSelected == 'encounter' }" href="#" class="w3-bar-item w3-button"><i class="material-icons">whatshot</i></a>
+						<a ng-click="tabSelected = 'chat'" ng-class="{'w3-green' : tabSelected == 'chat' }" href="#" class="w3-bar-item w3-button"><i class="material-icons">message</i></a>
 						<a href="#" class="w3-bar-item w3-button"><i class="material-icons">person_pin</i></a>
 					</div>
 					<div class="w3-third">
 						<a href="#" class="w3-bar-item w3-button w3-right"><i class="material-icons">account_circle</i></a>
 					</div>
 				</div>
-				<section class="window-content" >
+				<section class="window-content" ng-if="tabSelected == 'encounter'">
 					<div class="slider-wrap flex" style="transform: translateX(-{{translatePercent}}%)">
 						<div class="slider" ng-class="{'slider-active' : $index == actualUser}"  ng-repeat="user in genreSelected">
 							<div class="user-data flex">
@@ -56,20 +56,20 @@
 									<i class="material-icons">share</i>
 								</button>
 							</div>
-							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" ng-src="{{src}}" style="width:100%">
+							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" ng-class="{'blured' : instagramView}" class="mySlides" ng-src="{{src}}" style="width:100%">
 							<div class="instagram" ng-show="instagramView">
 								<div class="w3-row height-100">
 									<div class="w3-col m9 height-100">
 										<img src="img/01-a.jpg" alt="">
 									</div>
 
-									<div class="w3-col m3 height-100">							
+									<div class="w3-col m3 height-100">
 										<div>a</div>
 										<div>b</div>
 										<div>c</div>
 										<div>d</div>
 										<div>e</div>
-										<div>f</div>											
+										<div>f</div>
 									</div>
 								</div>
 							</div>
@@ -97,6 +97,9 @@
 							</div>
 						</div>
 					</div>
+				</section>
+				<section class="window-content" ng-if="tabSelected == 'chat'">
+					Vista de chat
 				</section>
 			</div>
 		</div>

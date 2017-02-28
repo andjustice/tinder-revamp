@@ -28,6 +28,7 @@ app.controller("mainCtrl", function($scope) {
         img      : ['img/01.jpg','img/01-a.jpg','img/01-b.jpg']
     }];
 
+    $scope.tabSelected      = 'encounter';
     $scope.genreSelected    = $scope.womens;
     $scope.selectedImgSrc   = $scope.genreSelected[0].img[0];
     $scope.actualUser       = 0;
