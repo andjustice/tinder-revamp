@@ -24,9 +24,10 @@ app.controller("mainCtrl", function($scope) {
         img      : ['img/01.jpg','img/01-a.jpg','img/01-b.jpg']
     }];
 
-    $scope.genreSelected  = $scope.womens;
-    $scope.selectedImgSrc = $scope.genreSelected[0].img[0];
-    $scope.actualUser     = 1;
+    $scope.genreSelected    = $scope.womens;
+    $scope.selectedImgSrc   = $scope.genreSelected[0].img[0];
+    $scope.actualUser       = 0;
+    $scope.translatePercent = 0;
 
     $scope.setImg = function(src) {
         $scope.selectedImgSrc = src;
@@ -50,8 +51,10 @@ app.controller("mainCtrl", function($scope) {
         }
     }
 
-    $scope.nextUser = function(id) {
-        $scope.actualUser++;
-        console.log($scope.actualUser);
+    $scope.nextUser = function() {
+        if ($scope.translatePercent != 66.666) {
+            $scope.translatePercent += 33.333;
+            $scope.actualUser = $scope.actualUser + 1;
+        }
     }
 });

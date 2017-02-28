@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   font-family: 'Muli', sans-serif;  
 }
 
+*:focus {
+    outline: none;
+}
+
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -117,8 +121,13 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .window-content {
   height: calc(100% - 45px);
-  width: 300%;
+  width: 100%;
   overflow-y: auto;
+}
+
+.slider-wrap {
+    width: 300%;
+    height: 100%;
 }
 
 .slider {
@@ -126,6 +135,11 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     overflow: hidden;
     position: relative;
     width: 100%;
+    transform: scale(.9);
+}
+
+.slider.slider-active {
+  transform:scale(1);
 }
 
 .slider .user-data {
@@ -151,8 +165,22 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   margin: 0;
 }
 
-.slider .user-data button{
-  background: red;
+.slider .user-data button{    
+    background: transparent;
+    border: none;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.slider .user-data button i{    
+    color: #ffffff;
+    font-size: 24px;
 }
 
 .slider .next-prev {
@@ -179,10 +207,26 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 }
 
 .slider .controls span {
-  width: 25px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.54);
-  display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.54);
+    display: inline-block;
+    margin: 0 8px;
+    border-radius: 50%;
+}
+
+.slider .controls span.indicator-active {
+    background: red;
+}
+
+.slider .controls button {
+  width: 48px;
+  height: 48px;  
+  margin: 0 8px;
+}
+
+.slider .controls button i{
+  line-height: 48px;  
 }
 
 .animation {

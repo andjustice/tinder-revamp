@@ -39,140 +39,54 @@
 					</div>
 
 				</div>
-				<section class="window-content flex">
-					<div class="slider" ng-init="sectionIndex = $index" ng-repeat="user in genreSelected" >
-						<div class="user-data flex">
-							<div>
-								<h4>{{user.name}}, {{user.age}}</h4>
-								<p>{{user.from}}</p>
-								<p>{{user.distance}}</p>
+				<section class="window-content">
+					<div class="slider-wrap flex" style="transform: translateX(-{{translatePercent}}%)">
+						<div class="slider" ng-class="{'slider-active' : $index == actualUser}"  ng-repeat="user in genreSelected">
+							<div class="user-data flex">
+								<div>
+									<h4>{{user.name}}, {{user.age}}</h4>
+									<p>{{user.from}}</p>
+									<p>{{user.distance}}</p>
+								</div>
+								<button class="w3-dropdown-hover">
+									<i class="fa fa-spotify" aria-hidden="true"></i>
+									<span class="w3-dropdown-content w3-green w3-padding">Hello World!</span>
+								</button>
+								<button>
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+								</button>
+								<button>
+									<i class="material-icons">share</i>
+								</button>
 							</div>
-							<button class="w3-dropdown-hover">
-								<i class="fa fa-spotify fa-2x" aria-hidden="true"></i>
-								<span class="w3-dropdown-content w3-green w3-padding">Hello World!</span>
-							</button>
-							<button class="w3-btn w3-transparent">
-								<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-							</button>
-							<button class="w3-btn w3-transparent">
-								<i class="material-icons w3-text-white">share</i>
-							</button>
-						</div>
 
-						<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" ng-src="{{src}}" style="width:100%">
-						<!-- <img class="mySlides" src="img/01-a.jpg" style="width:100%">
-						<img class="mySlides" src="img/01-b.jpg" style="width:100%"> -->
+							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" src="{{src}}" style="width:100%">
+							<!-- <img class="mySlides" src="img/01-a.jpg" style="width:100%">
+							<img class="mySlides" src="img/01-b.jpg" style="width:100%"> -->
 
-						<div class="next-prev flex">
-							<div class="w3-hover-text-khaki" ng-click="prevImg(user.img)">&#10094;</div>
-							<div class="w3-hover-text-khaki" ng-click="nextImg(user.img)">&#10095;</div>
-						</div>
+							<div class="next-prev flex">
+								<div class="w3-hover-text-khaki" ng-click="prevImg(user.img)">&#10094;</div>
+								<div class="w3-hover-text-khaki" ng-click="nextImg(user.img)">&#10095;</div>
+							</div>
 
-						<div class="controls w3-padding-left w3-padding-right">
-							<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser($index)">
-								<i class="material-icons">clear</i>
-							</button>
-							<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser($index)">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser($index)">
-								<i class="material-icons w3-text-amber">star</i>
-							</button>
-							<p>{{user.desc}}</p>
+							<div class="controls w3-padding-left w3-padding-right">
+								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
+									<i class="material-icons">clear</i>
+								</button>
+								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
+									<i class="material-icons w3-text-pink">favorite</i>
+								</button>
+								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
+									<i class="material-icons w3-text-amber">star</i>
+								</button>
+								<p>{{user.desc}}</p>
 
-							<span ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
+								<span ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
+							</div>
 						</div>
 					</div>
-
-					<!-- <div id="user-2" class="slider">
-						<div class="user-data flex">
-							<div>
-								<h4>Jane Doe</h4>
-								<p>Lorem ipsum dolor</p>
-							</div>
-							<button class="w3-btn">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn w3-transparent">
-								<i class="material-icons w3-text-white">share</i>
-							</button>
-						</div>
-
-						<img class="mySlides" src="img/01.jpg" style="width:100%">
-						<img class="mySlides" src="img/01-a.jpg" style="width:100%">
-						<img class="mySlides" src="img/01-b.jpg" style="width:100%">
-
-						<div class="next-prev flex">
-							<div class="w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-							<div class="w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-						</div>
-						<div class="controls w3-padding-left w3-padding-right">
-							<button class="w3-btn w3-btn-floating w3-white">
-								<i class="material-icons">clear</i>
-							</button>
-							<button class="w3-btn w3-btn-floating w3-white">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn w3-btn-floating w3-white">
-								<i class="material-icons w3-text-amber">star</i>
-							</button>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.</p>
-							<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
-							<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
-							<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>
-						</div>
-					</div>
-
-					<div id="user-3" class="slider">
-						<div class="user-data flex">
-							<div>
-								<h4>Jane Doe</h4>
-								<p>Lorem ipsum dolor</p>
-							</div>
-							<button class="w3-btn">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn w3-transparent">
-								<i class="material-icons w3-text-white">share</i>
-							</button>
-						</div>
-
-						<img class="mySlides" src="img/01.jpg" style="width:100%">
-						<img class="mySlides" src="img/01-a.jpg" style="width:100%">
-						<img class="mySlides" src="img/01-b.jpg" style="width:100%">
-
-						<div class="next-prev flex">
-							<div class="w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-							<div class="w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-						</div>
-						<div class="controls w3-padding-left w3-padding-right">
-							<button class="w3-btn w3-btn-floating w3-white">
-								<i class="material-icons">clear</i>
-							</button>
-							<button class="w3-btn w3-btn-floating w3-white">
-								<i class="material-icons w3-text-pink">favorite</i>
-							</button>
-							<button class="w3-btn w3-btn-floating w3-white">
-								<i class="material-icons w3-text-amber">star</i>
-							</button>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.</p>
-							<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
-							<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
-							<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>
-						</div>
-					</div> -->
-
 
 				</section>
-				</div>
-
-
 			</div>
 		</div>
 
