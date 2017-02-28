@@ -128,6 +128,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 .slider-wrap {
     width: 300%;
     height: 100%;
+    overflow: hidden;
 }
 
 .slider {
@@ -196,6 +197,10 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     height: 100%;
 }
 
+.slider .next-prev > div i{
+    font-size: 48px;
+}
+
 .slider .controls {
     position: absolute;
     height: 150px;
@@ -216,7 +221,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 }
 
 .slider .controls span.indicator-active {
-    background: red;
+    background: #EF6567;
 }
 
 .slider .controls button {
