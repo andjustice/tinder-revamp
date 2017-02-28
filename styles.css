@@ -129,6 +129,15 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     width: 300%;
     height: 100%;
     overflow: hidden;
+    transition: transform 1s ease;
+}
+
+.slider-wrap .slider:nth-child(1) {
+  transform:none !important;
+}
+
+.slider-wrap .slider.slider-active:nth-child(1){
+  animation:none !important;
 }
 
 .slider {
@@ -136,11 +145,22 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     overflow: hidden;
     position: relative;
     width: 100%;
-    transform: scale(.9);
+    transform: scale(.9);     
 }
 
 .slider.slider-active {
-  transform:scale(1);
+    animation: slider-active .5s ease;  
+    animation-fill-mode: forwards;
+    animation-delay:1s; 
+}
+
+@keyframes slider-active {
+    0% {
+      transform: scale(.9);
+    }
+    100% {
+      transform: scale(1);
+    }
 }
 
 .slider .user-data {
@@ -234,21 +254,3 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   line-height: 48px;  
 }
 
-.animation {
-  animation: animation .4s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes animation {
-    0% {
-      transform: scale(0);
-    }
-
-
-
-    100% {
-      transform: scale(.8);
-    }
-
-
-}
