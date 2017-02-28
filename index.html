@@ -57,19 +57,17 @@
 								</button>
 							</div>
 							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" ng-class="{'blured' : instagramView}" class="mySlides" ng-src="{{src}}" style="width:100%">
+							<img ng-show="prevImgSrc" class="mySlides" ng-src="{{prevImgSrc}}" style="width:100%">
 							<div class="instagram" ng-show="instagramView">
 								<div class="w3-row height-100">
 									<div class="w3-col m9 height-100">
-										<img src="img/01-a.jpg" alt="">
+										<img ng-src="{{selectedIgImg}}" alt="">
 									</div>
 
 									<div class="w3-col m3 height-100">
-										<div>a</div>
-										<div>b</div>
-										<div>c</div>
-										<div>d</div>
-										<div>e</div>
-										<div>f</div>
+										<div ng-click="setIgImg(igImg)" ng-repeat="igImg in user.instagramImg">
+											<img ng-src="{{igImg}}" alt="" />
+										</div>
 									</div>
 								</div>
 							</div>
