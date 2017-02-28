@@ -81,13 +81,8 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   width: 100%;
   max-width: 1000px;
   height: 85%;
-<<<<<<< HEAD
   background: #ffffff;
   border-radius:5px;  
-=======
-  background: blue;
-  border-radius:5px;
->>>>>>> origin/master
   overflow: hidden;
   transform: translateY(-50%);
   transform-origin: center;
@@ -99,7 +94,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .window-btn {
     padding: 0 0 0 12px;
-    height: 45px;
+    height: 46px;
 }
 
 .window-btn > div{
@@ -125,6 +120,20 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     background: #34C84A;
     border-color:#1FA72D;
     margin: 0;
+}
+
+.window .w3-bar .fk-tab-wrap {
+  display: flex;
+  justify-content: center;
+  height: 46px;
+}
+
+.window .w3-bar .fk-tab-wrap a {
+    float: none;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .window-content {
@@ -187,12 +196,20 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   width: 100%;
 }
 
-.slider .user-data > div h4{
-  margin-bottom: 0;
+.slider .user-data > div h5{
+    margin: 4px 0 0 0;
 }
 
 .slider .user-data > div p{
-  margin: 0;
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.slider .user-data > div p span{  
+    font-size: 12px;
+    line-height: 12px;
+    /*display: block;*/
 }
 
 .slider .user-data button{
@@ -234,13 +251,17 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 
 .slider .controls {
     position: absolute;
-    height: 150px;
+    height: 130px;
     width: 100%;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.4) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
     color: #fff;
     text-align: center;
     transition: transform .5s ease;
+}
+
+.slider .controls p {
+    margin: 6px 0;
 }
 
 .slider .controls span {
@@ -263,11 +284,13 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 }
 
 .slider .controls button i{
-  line-height: 48px;
+  display: flex;
+  margin: auto;
+  width: 24px;
 }
 
 .slider .controls.only-buttons {
-  transform: translateY(85px);
+  transform: translateY(70px);
 }
 
 .instagram {
@@ -276,7 +299,6 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: red;
     width: 90%;
     bottom: 16px;
 }

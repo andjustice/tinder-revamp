@@ -27,9 +27,9 @@
 						<div></div>
 						<div></div>
 					</div>
-					<div class="w3-third w3-center">
-						<a ng-click="tabSelected = 'encounter'" ng-class="{'w3-green' : tabSelected == 'encounter' }" href="#" class="w3-bar-item w3-button"><i class="material-icons">whatshot</i></a>
-						<a ng-click="tabSelected = 'chat'" ng-class="{'w3-green' : tabSelected == 'chat' }" href="#" class="w3-bar-item w3-button"><i class="material-icons">message</i></a>
+					<div class="w3-third fk-tab-wrap">
+						<a ng-click="tabSelected = 'encounter'" ng-class="{'w3-text-pink' : tabSelected == 'encounter' }" href="#" class="w3-bar-item w3-button"><i class="material-icons">whatshot</i></a>
+						<a ng-click="tabSelected = 'chat'" ng-class="{'w3-text-pink' : tabSelected == 'chat' }" href="#" class="w3-bar-item w3-button"><i class="material-icons">message</i></a>
 						<a href="#" class="w3-bar-item w3-button"><i class="material-icons">person_pin</i></a>
 					</div>
 					<div class="w3-third">
@@ -41,9 +41,8 @@
 						<div class="slider" ng-class="{'slider-active' : $index == actualUser}"  ng-repeat="user in genreSelected">
 							<div class="user-data flex">
 								<div>
-									<h4>{{user.name}}, {{user.age}}</h4>
-									<p>{{user.from}}</p>
-									<p>{{user.distance}}</p>
+									<h5>{{user.name}}, {{user.age}}</h5>
+									<p>{{user.from}} - <span>{{user.distance}}</span></p>									
 								</div>
 								<button class="w3-dropdown-hover">
 									<i class="fa fa-spotify" aria-hidden="true"></i>
@@ -80,14 +79,14 @@
 								</div>
 							</div>
 							<div class="controls w3-padding-left w3-padding-right" ng-class="{'only-buttons' : instagramView}">
-								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
+								<button class="w3-btn w3-btn-floating w3-white w3-hover-red w3-text-red w3-hover-text-white" ng-click="nextUser()">
 									<i class="material-icons">clear</i>
 								</button>
-								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
-									<i class="material-icons w3-text-pink">favorite</i>
+								<button class="w3-btn w3-btn-floating w3-white w3-hover-teal w3-text-teal w3-hover-text-white" ng-click="nextUser()">
+									<i class="material-icons">favorite</i>
 								</button>
-								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
-									<i class="material-icons w3-text-amber">star</i>
+								<button class="w3-btn w3-btn-floating w3-white w3-hover-blue w3-text-blue w3-text-hover-white" ng-click="nextUser()">
+									<i class="material-icons">star</i>
 								</button>
 								<p ng-show="!instagramView">{{user.desc}}</p>
 
