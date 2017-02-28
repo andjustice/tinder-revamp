@@ -120,9 +120,9 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
 }
 
 .window-content {
-  height: calc(100% - 45px);
-  width: 100%;
-  overflow-y: auto;
+    height: calc(100% - 45px);
+    width: 100%;
+    overflow: hidden;
 }
 
 .slider-wrap {
@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   animation:none !important;
 }
 
-.slider-wrap::-webkit-scrollbar {
+/*.slider-wrap::-webkit-scrollbar {
     width: 12px;
     height: 12px;
     background: red;
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     height: 12px;
     width: 12px;
     background: red;
-} 
+} */
 
 .slider {
     height:100%;
