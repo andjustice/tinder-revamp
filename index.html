@@ -21,7 +21,6 @@
 		margin: 0;
 		overflow-x: hidden;
 	}
-
 </style>
 <body ng-controller="mainCtrl">
 	<div class="main">
@@ -44,12 +43,12 @@
 
 			</div>
 			<section class="window-content flex">
-				<div id="user-1" class="slider">
+				<div class="slider" ng-repeat="person in genreSelected">
 					<div class="user-data flex">
 						<div>
-							<h4>Jane Doe, 28</h4>
-							<p>Lorem ipsum dolor</p>
-							<p>3 mi.</p>
+							<h4>{{person.name}}, {{person.age}}</h4>
+							<p>{{person.from}}</p>
+							<p>{{person.distance}}</p>
 						</div>
 						<button class="w3-btn w3-transparent">
 							<i class="fa fa-spotify fa-2x" aria-hidden="true"></i>
@@ -62,9 +61,9 @@
 						</button>
 					</div>
 
-					<img class="mySlides" src="img/01.jpg" style="width:100%">
-					<img class="mySlides" src="img/01-a.jpg" style="width:100%">
-					<img class="mySlides" src="img/01-b.jpg" style="width:100%">
+					<img ng-repeat="img in person.img" class="mySlides" src="{{img}}" style="width:100%">
+					<!-- <img class="mySlides" src="img/01-a.jpg" style="width:100%">
+					<img class="mySlides" src="img/01-b.jpg" style="width:100%"> -->
 
 					<div class="next-prev flex">
 						<div class="w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
@@ -80,14 +79,14 @@
 						<button class="w3-btn w3-btn-floating w3-white">
 							<i class="material-icons w3-text-amber">star</i>
 						</button>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.</p>
+						<p>{{person.desc}}</p>
 						<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
 						<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
 						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>
 					</div>
 				</div>
 
-				<div id="user-2" class="slider">
+				<!-- <div id="user-2" class="slider">
 					<div class="user-data flex">
 						<div>
 							<h4>Jane Doe</h4>
@@ -169,7 +168,7 @@
 						<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
 						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>
 					</div>
-				</div>
+				</div> -->
 
 
 			</section>
