@@ -68,6 +68,10 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     flex-direction: column;
 }
 
+.height-100 {
+  height:100%;
+}
+
 .main {
   height: 100%;
   background: red;
@@ -270,5 +274,21 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     background: red;
     width: 90%;
     bottom: 16px;
+}
+
+.instagram .w3-col.m9  {
+    overflow: hidden;
+}
+
+.instagram .w3-col.m9 img {
+    width: 100%;
+}
+
+.instagram .w3-col.m3 > div {
+    background: blue;
+    height: 20%;
+    width: 44%;
+    float: left;
+    margin: 3%;
 }
 

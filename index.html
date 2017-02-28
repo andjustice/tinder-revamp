@@ -31,12 +31,10 @@
 						<a href="#" class="w3-bar-item w3-button w3-green"><i class="material-icons">whatshot</i></a>
 						<a href="#" class="w3-bar-item w3-button"><i class="material-icons">message</i></a>
 						<a href="#" class="w3-bar-item w3-button"><i class="material-icons">person_pin</i></a>
-
 					</div>
 					<div class="w3-third">
 						<a href="#" class="w3-bar-item w3-button w3-right"><i class="material-icons">account_circle</i></a>
 					</div>
-
 				</div>
 				<section class="window-content" >
 					<div class="slider-wrap flex" style="transform: translateX(-{{translatePercent}}%)">
@@ -58,21 +56,31 @@
 									<i class="material-icons">share</i>
 								</button>
 							</div>
-
 							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" ng-src="{{src}}" style="width:100%">
 							<div class="instagram" ng-show="instagramView">
-								kb
-							</div>
+								<div class="w3-row height-100">
+									<div class="w3-col m9 height-100">
+										<img src="img/01-a.jpg" alt="">
+									</div>
 
+									<div class="w3-col m3 height-100">							
+										<div>a</div>
+										<div>b</div>
+										<div>c</div>
+										<div>d</div>
+										<div>e</div>
+										<div>f</div>											
+									</div>
+								</div>
+							</div>
 							<div class="next-prev flex" ng-show="!instagramView">
-								<div class="w3-hover-text-khaki" ng-click="prevImg(user.img)">
+								<div class="w3-text-white w3-hover-text-pink" ng-click="prevImg(user.img)">
 									<i class="material-icons">chevron_left</i>
 								</div>
-								<div class="w3-hover-text-khaki" ng-click="nextImg(user.img)">
+								<div class="w3-text-white w3-hover-text-pink" ng-click="nextImg(user.img)">
 									<i class="material-icons w3-right">chevron_right</i>
 								</div>
 							</div>
-
 							<div class="controls w3-padding-left w3-padding-right" ng-class="{'only-buttons' : instagramView}">
 								<button class="w3-btn w3-btn-floating w3-white" ng-click="nextUser()">
 									<i class="material-icons">clear</i>
@@ -89,67 +97,8 @@
 							</div>
 						</div>
 					</div>
-
 				</section>
 			</div>
 		</div>
-
-
 	</body>
-<script>
-//        var scene = new ScrollMagic.Scene({
-//            triggerElement: ".content", duration: "100%"})
-//        .setTween(".caca", 0.5, {backgroundColor: "green", scale: 2.5})
-//        .addIndicators({name: "1 (duration: 0)"})
-//        .addTo(controller);
-
-//         var scene = new ScrollMagic.Scene({
-//             triggerElement: ".scs-parallax3", duration:"40%", triggerHook: '0.50' })
-//         .setTween(".scs-parallax3-img03", 0.5, {top:"-0%"})
-// //        .addIndicators({name: "1 (duration: 0)"})
-//         .addTo(controller);
-
-//         var scene = new ScrollMagic.Scene({
-//             triggerElement: ".scs-parallax3", duration:"40%", triggerHook: '0.45' })
-//         .setTween(".scs-parallax3-img02", 0.5, {top:"0%"})
-//                 .addIndicators({name: "1 (duration: 0)"})
-//         .addTo(controller);
-
-//         var scene = new ScrollMagic.Scene({
-//             triggerElement: ".trigger", duration: "100%",  triggerHook: 'onCenter'})
-//         .setTween(".scs-parallax3-img01", 0.5, {top:"50%"})
-//         //        .addIndicators({name: "1 (duration: 0)"})
-//         .addTo(controller);
-
-
-</script>
-
-<script>
-  // ar slideIndex = 1;
-  // howDivs(slideIndex);
-  //
-  // unction plusDivs(n) {
-  //  showDivs(slideIndex += n);
-  // }
-  //
-  // function currentDiv(n) {
-  //  showDivs(slideIndex = n);
-  // }
-  //
-  // function showDivs(n) {
-  //  var i;
-  //  var x = document.getElementsByClassName("mySlides");
-  //  var dots = document.getElementsByClassName("indicators");
-  //  if (n > x.length) {slideIndex = 1}
-  //   if (n < 1) {slideIndex = x.length}
-  // 	  for (i = 0; i < x.length; i++) {
-  // 	   x[i].style.display = "none";
-  //    }
-  //    for (i = 0; i < dots.length; i++) {
-  // 	   dots[i].className = dots[i].className.replace(" w3-white", "");
-  //    }
-  //    x[slideIndex-1].style.display = "block";
-  //    dots[slideIndex-1].className += " w3-white";
-  //   }
-   </script>
-   </html>
+</html>
