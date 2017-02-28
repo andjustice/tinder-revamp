@@ -10,6 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+		<script src="./js/disable-scroll.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="styles.css">
 		<script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
@@ -39,8 +40,8 @@
 					</div>
 
 				</div>
-				<section class="window-content">
-					<div class="slider-wrap flex" style="transform: translateX(-{{translatePercent}}%)">
+				<section class="window-content" >
+					<div class="slider-wrap flex" ngDisableScroll='1' style="transform: translateX(-{{translatePercent}}%)">
 						<div class="slider" ng-class="{'slider-active' : $index == actualUser}"  ng-repeat="user in genreSelected">
 							<div class="user-data flex">
 								<div>
@@ -62,7 +63,7 @@
 
 							<img ng-show="selectedImgSrc == src" ng-repeat="src in user.img" class="mySlides" src="{{src}}" style="width:100%">
 							<div class="instagram">
-								kb	
+								kb
 							</div>
 
 							<div class="next-prev flex">

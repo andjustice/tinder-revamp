@@ -1,7 +1,7 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ['ngDisableScroll']);
 
 app.controller("mainCtrl", function($scope) {
-    
+
     $scope.womens = [{
         name     : "Jane Doe",
         age      : 27,
