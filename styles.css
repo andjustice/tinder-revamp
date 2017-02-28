@@ -151,6 +151,10 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
   margin: 0;
 }
 
+.slider .user-data button{
+  background: red;
+}
+
 .slider .next-prev {
     position: absolute;
     width: 100%;
