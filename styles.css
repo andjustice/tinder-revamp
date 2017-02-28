@@ -176,6 +176,7 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     width: 100%;
     color: #fff;
     padding: 0 8px;
+    z-index: 1;
 }
 
 .slider .user-data > div {
@@ -290,5 +291,9 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     width: 44%;
     float: left;
     margin: 3%;
+}
+
+.blured {
+  filter: blur(10px);
 }
 
