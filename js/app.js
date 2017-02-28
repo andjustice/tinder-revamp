@@ -25,4 +25,5 @@ app.controller("mainCtrl", function($scope) {
     }];
 
     $scope.genreSelected = $scope.womens;
+    $scope.selectedImgSrc = '';
 });

@@ -61,7 +61,7 @@
 						</button>
 					</div>
 
-					<img ng-repeat="img in person.img" class="mySlides" src="{{img}}" style="width:100%">
+					<img ng-init="selectedImgSrc = src" ng-show="selectedImgSrc == src" ng-repeat="src in person.img" class="mySlides" src="{{src}}" style="width:100%">
 					<!-- <img class="mySlides" src="img/01-a.jpg" style="width:100%">
 					<img class="mySlides" src="img/01-b.jpg" style="width:100%"> -->
 
@@ -80,9 +80,8 @@
 							<i class="material-icons w3-text-amber">star</i>
 						</button>
 						<p>{{person.desc}}</p>
-						<span class="indicators w3-hover-white" onclick="currentDiv(1)"></span>
-						<span class="indicators w3-hover-white" onclick="currentDiv(2)"></span>
-						<span class="indicators w3-hover-white" onclick="currentDiv(3)"></span>
+
+						<span ng-repeat="src in person.img" class="indicators w3-hover-white" ng-click="selectedImgSrc = src"></span>
 					</div>
 				</div>
 
