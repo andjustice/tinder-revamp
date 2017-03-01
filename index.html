@@ -10,6 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.2/angular-sanitize.min.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js'></script>
 		<script src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js'></script>
@@ -91,7 +92,7 @@
 								<button class="w3-btn w3-btn-floating w3-white w3-hover-blue w3-text-blue w3-text-hover-white" ng-click="nextUser()">
 									<i class="material-icons">star</i>
 								</button>
-								<p ng-show="!instagramView" ng-bind="user.desc"></p>
+								<p ng-show="!instagramView" ng-bind-html="user.desc"></p>
 
 								<span ng-show="!instagramView" ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
 							</div>
