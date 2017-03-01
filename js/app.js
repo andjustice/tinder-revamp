@@ -85,8 +85,8 @@ app.controller("mainCtrl", function($scope,$timeout) {
     //nextUser Indica el indice de el nuevo usuario a mostrar, setea la primer foto del usuario por default y hace la animacion de cambio de usuario.
     $scope.nextUser = function() {
         $scope.instagramView = false;
-        if ($scope.translatePercent != 66.666) {
-            $scope.translatePercent += 33.333;
+        if ($scope.actualUser < $scope.genreSelected.length - 1) {
+            $scope.translatePercent += 100 / $scope.genreSelected.length;
             $scope.actualUser       = $scope.actualUser + 1;
             $scope.prevImgSrc       = $scope.selectedImgSrc;
             $scope.selectedIgImg    = $scope.genreSelected[$scope.actualUser].instagramImg[0];

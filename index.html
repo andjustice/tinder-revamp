@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<section class="window-content" ng-if="tabSelected == 'encounter'">
-					<div class="slider-wrap flex" style="transform: translateX(-{{translatePercent}}%)">
+					<div class="slider-wrap flex" ng-style="{width: genreSelected.length * 100 + '%', transform : 'translateX(-' + translatePercent + '%)'}">
 						<div class="slider"  ng-style="{transform: ($index == actualUser) ? 'scale(1)' : 'scale(.9)'}" ng-repeat="user in genreSelected">
 							<div class="user-data flex">
 								<div>
