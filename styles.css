@@ -227,6 +227,10 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     margin: 0 8px;
 }
 
+.slider .user-data button:disabled i{
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .slider .user-data button i{
     color: #ffffff;
     font-size: 24px;
