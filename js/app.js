@@ -93,4 +93,13 @@ app.controller("mainCtrl", function($scope,$timeout) {
             $scope.selectedImgSrc   = $scope.genreSelected[$scope.actualUser].img[0];
         }
     }
+
+    $scope.prevUser = function() {
+        $scope.instagramView = false;
+        $scope.translatePercent += -33.333;
+        $scope.actualUser       = $scope.actualUser - 1;
+        $scope.prevImgSrc       = $scope.selectedImgSrc;
+        $scope.selectedIgImg    = $scope.genreSelected[$scope.actualUser].instagramImg[0];
+        $scope.selectedImgSrc   = $scope.genreSelected[$scope.actualUser].img[0];
+    }
 });
