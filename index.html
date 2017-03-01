@@ -41,6 +41,9 @@
 						<div class="slider" ng-class="{'slider-active' : $index == actualUser}"  ng-repeat="user in genreSelected">
 							<div class="user-data flex">
 								<div>
+									<button class="w3-left">
+										<i class="material-icons">arrow_back</i>
+									</button>
 									<h5>{{user.name}}, {{user.age}}</h5>
 									<p>{{user.from}} - <span>{{user.distance}}</span></p>
 								</div>
