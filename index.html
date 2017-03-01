@@ -91,7 +91,7 @@
 								<button class="w3-btn w3-btn-floating w3-white w3-hover-blue w3-text-blue w3-text-hover-white" ng-click="nextUser()">
 									<i class="material-icons">star</i>
 								</button>
-								<p ng-show="!instagramView">{{user.desc}}</p>
+								<p ng-show="!instagramView" ng-bind="user.desc"></p>
 
 								<span ng-show="!instagramView" ng-repeat="src in user.img" ng-class="{'indicator-active' : src == selectedImgSrc}" class="indicators w3-hover-white" ng-click="setImg(src)"></span>
 							</div>

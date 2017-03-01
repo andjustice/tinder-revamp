@@ -19,7 +19,7 @@ app.controller("mainCtrl", function($scope,$timeout) {
         distance     : "5 mi.",
         spotify      : "Justin Bieber - Sorry",
         instagramImg : ['img/women/02/02.jpg','img/women/02/03.jpg'],
-        desc         : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae totam similique, maiores distinctio. Tempore et quod, iste accusantium perspiciatis, delectus nam suscipit cumque dolore, culpa aut praesentium ab. Similique, error.",
+        desc         : "Lorem ipsum dolor sit amet &#9996;",
         img          : ['img/women/02/01.jpg','img/women/02/02.jpg','img/women/02/03.jpg']
     },{
         name         : "Mary Chloe",
