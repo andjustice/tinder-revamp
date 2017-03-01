@@ -227,6 +227,14 @@ h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
     margin: 0 8px;
 }
 
+.slider .user-data button .w3-dropdown-content{ 
+    top: 50px;
+    right: 0px;
+    border-radius: 2px;
+    width: 300px;
+}
+
+
 .slider .user-data button:disabled i{
     color: rgba(255, 255, 255, 0.5);
 }
